@@ -7,61 +7,171 @@
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+        <link rel="sortcut icon" href="./images/logo.png" type="image/png-image">
     </head>
     <body>
         <header class="cabeçalho">
-            <div class="restaurant_logo">
+            <div class="restaurant_logo_E_nome">
                 <img class="logo" src="./images/logo.png" alt="logo" width="100px">
                 <h1 class="nome">Restaurant</h1>
             </div>
             
                         
-            <table>
-                <tr>
-                    <th class="Home"><a href="">Home</a></th>
-                    <th class="Contato"><a href="">Contato</a></th>
+            <table class="menu">
+                <tr class="menu_cabeçalho">
+                    <th class="pedido"><a href="#delivery">Delivery</a></th>
+                    <th class="Contato"><a href="#contato">Contato</a></th>
                     <th class="Pratos"><a href="#pratos">Pratos</a></th>
+                    <th class="Quem_somos"><a href="#quemSomos">Quem Somos</a></th>
                 </tr>
             </table>
         </header>
         
         <div class="fundo_restaurant">
-            <section class="delivery">
+            <section class="delivery_form">
 
                 <div class="delivery_description">
                     <h2>Delivery</h2>
-                    <p>Quer fazer um pedido?</p>
+                    <p>Quer fazer um Pedido ?</p>
                 </div>
                 
                 <form>
-                    <input type="text" name="Bairro" placeholder="Bairro">
-                    <input type="text" name="Rua" placeholder="Rua">
-                    <input type="number" name="Numero_casa" placeholder="Nº da Residência">
-    
+                    <input type="text" name="Nome" placeholder="Nome">
+                    <input type="text" name="sobrenome" placeholder="Sobrenome">
+                    <input type="number" name="telefone" placeholder="Telefone">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" name="endereço" placeholder="Endereço para Entrega">
+
+                    <textarea name="complemento" cols="30" rows="4" placeholder="Complemento"></textarea>
+
                     <h3>Lanches Disponíveis</h3>
-                    <select name="lanches">
-                        <option value="hambúrguer">Hambúrguer</option>
-                        <option value="esfiha">Esfiha</option>
-                        <option value="carne">Carne</option>
-                        <option value="sanduíche_wrap">Sanduíche e Wrap</option>
-                        <option value="sushi_sashimi">Sushi e sashimi</option>
-                        <option value="açaí">Açaí</option>
-                        <option value="pizza_calabresa">Pizza Calabresa</option>
+                    <select class="lanches" name="lanches">
+                        <option value="hamburguer">Hamburguer</option>
+                        <option value="hot_dog">Cachorro Quente</option>
                         <option value="pizza_muçarela">Pizza Muçarela</option>
-                        <option value="batata_frita">Batata Frita</option>
-                        <option value="refrigerante">Refrigerante</option>
-                        <option value="cerveja">Cerveja</option>
+                        <option value="pizza_Napolitana">Pizza Napolitana</option>
+                        <option value="pizza_calabresa">Pizza Calabresa</option>
+                        <option value="sanduíche_natural">Sanduíche Natural</option>
+                        <option value="coxinha_frango">Coxinha de Frango</option>
+                        <option value="smoothie">Smoothie</option>
+                        <option value="açaí">Açaí com Calda de Chocolate</option>
+                        <option value="esfirra_carne">Esfirra de Carne</option>
                     </select>
-                        
+
+                    <input type="number" name="quantidade_lanches" placeholder="Quantidade">
+
+                    <h3>Bebidas Disponíveis</h3>
+                    <select class="bebidas" name="bebidas">
+                        <option value="Coca-cola">Coca-Cola em Lata</option>
+                        <option value="guaraná">Guaraná em Lata</option>
+                        <option value="suco_natural">Suco de Frutas Natural</option>
+                        <option value="agua_gaz">Agua com Gás</option>
+                        <option value="redbull">Energético Redbull</option>
+                        <option value="monster">Energético Monster</option>
+                        <option value="batida">Batida de Abacaxi com Morango</option>
+                        <option value="coquete_limão">Coquetel de limão</option>
+                    </select>
+
+                    <input type="number" name="quantidade_bebidas" placeholder="Quantidade">
+
                     <input type="submit" value="Concluir Pedido">
                 </form>
             </section>
         </div>
         
-        <div class="pratos">
-            <h1 id="pratos">Pratos</h1>
+        <div id="pratos">
+            <h1 class="Pratos">Pratos</h1>
             <div class="linha"></div>
+            
+            <ul class="foods">
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/burguer.jpg" alt="burguer">
+                </li>
+
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/batata_frita.jpg" alt="batata_frita">
+                </li>
+
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/pizza.jpg" alt="pizza">
+                </li>
+
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/macarrão.jpg" alt="macarrão">
+                </li>
+                
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/peixe_grelhado.jpg" alt="peixe_grelhado">
+                </li>
+
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/camarão.jpg" alt="camarão">
+                </li>
+
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/panqueca.jpeg" alt="panqueta">
+                </li>
+
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/bife_grelhado.jpg" alt="bife_grelhado">
+                </li>
+
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/sanduíche_assado_com_ovo_frito.jpg" alt="sanduíche_assado_com_ovo_frito">
+                </li>
+            </ul>
+            
+            <h1 id="quemSomos">Quem Somos</h1>
+            <div class="linha"></div>
+            <div class="sobre">
+                <p>Há 23 anos servimos o almoço que é o mais próximo do que você poderia comer em sua casa. 
+                    Pratos elaborados com produtos de primeira qualidade, preparados com carinho pela nossa Equipe. 
+                    Aqui você se sente em casa e encontra o que quer em matéria de refeição saborosa</p>
+                <br>
+                <p>O Restaurant leva até você o melhor almoço A La Carte da região acompanhado de um ótimo atendimento e por um preço mais que interessante, ou seja, 
+                    aqui você une o bom atendimento, qualidade e ótimo custo benefício e sai sempre satisfeito.</p>
+                <br>
+                <p>Temos um cardápio variado com pratos da cozinha Euro-Brasileira, com Buffet de Saladas e Sobremesas (inclusos no preço do prato) e do qual você pode servir-se à vontade.
+                    Com certeza aqui você encontrará a comida que procura.</p>
+            </div>
         </div>
-        
+    
+        <footer id="contato">
+            <div class="rodapé">
+                <div class="location">
+                    
+                    <h2>Localização</h2>
+                    <br>
+                    <p>R. Concórdia, 153 - Centro, Lucas do Rio Verde - MT, 78455-000</p>
+                </div>
+    
+                <div class="Social_media">
+                    <h2>Contato</h2>
+                    <br>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/"><img src="./images/instagram.png" alt="instagram_image"></a>
+                        </li>
+                        <li>
+                            <a href="https://web.whatsapp.com/"><img src="./images/whatsapp.png" alt="whatsapp_image"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/"><img src="./images/facebook.png" alt="facebook_image"></a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="obs">
+                    <h2>Observações</h2>
+                    <br>
+                    <p>Esta é uma Página de amostra criada apenas para fins de apredizagem usando apenas CSS e HTML.</p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="copyright">
+            <p>©2021 - Todos os direitos reservados a <i> Anderson Bones </i>. Todas as imagens foram usadas exclusivamente para fins estudantis.</p>
+        </div>
+
     </body>
 </html>
