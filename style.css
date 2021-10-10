@@ -4,15 +4,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #181818;
 }
 
- /* class cabeçalho*/
  .cabeçalho{
     background-color: #8B0000;
     position: relative;
-    margin: auto;
     overflow: hidden;
     box-shadow: inset 0 0 0px black, 0 0 2em black;
 }
@@ -27,94 +29,46 @@ body{
     font-size: 60px;
 }
 
-table{
+.menu{
     position: absolute;
     bottom: 50%;
     transform: translateY(50%);
     right: 100px;
 }
 
-th{
-    padding-left: 30px;
+.menu_cabeçalho th{
+    padding-left: 20px;
 }
 
-a{
+.menu_cabeçalho a{
     color: white;
     font-size: 20px;
     text-decoration: none;
     padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
     font-family: 'Comfortaa', cursive;
 
 }
 
-a:hover{
+.menu_cabeçalho a:hover{
     background-color: #f08700;
     border-radius: 20px;
     padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
     box-shadow: inset 0 0 5px gold, 0 0 1em gold;
 }
 
 
  /* class "fundo_restaurant"*/
  .fundo_restaurant{
-    max-width: 100%;
-    height: 100vh;
+    width: 100%;
+    display: inline-block;
     background-image: url(./images/restaurant.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    padding-top: 50px;
-    padding-right: 50px;
+    padding: 50px;
 }
 
-
-/* class "delivery" */
-input{
-    display: inline-block;
-    width: 80%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #640404cc;
-    color: white;
-    font-family: "Comfortaa";
-}
-
-input::placeholder{
-    padding-left: 5px;
-    color: white;
-    font-family: "Comfortaa";
-}
-
-input[type=number]::-webkit-inner-spin-button { 
-    -webkit-appearance: none;
-    
-}
-input[type=number] { 
-   -moz-appearance: textfield;
-   appearance: textfield;
-
-}
-
-select{
-    width: 80%;
-    border: none;
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    color: white;
-    font-family: "Comfortaa";
-    background-color: #640404cc;
-}
-
-.delivery{
+.delivery_form{
     padding: 20px;
     border-radius: 20px;
     color: white;
@@ -153,6 +107,7 @@ input[type="submit"]{
     font-family:"Comfortaa";
     font-weight: bold;
     cursor: pointer;
+    font-size: 18px;
 }
 
 input[type="submit"]:hover{
@@ -160,7 +115,69 @@ input[type="submit"]:hover{
     cursor: pointer;
 }
 
-.pratos{
+/* class "delivery" */
+input{
+    display: inline-block;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #640404cc;
+    color: white;
+    font-family: "Comfortaa";
+}
+
+input, select{
+    font-size: 12px;
+}
+
+input::placeholder{
+    padding-left: 5px;
+    color: white;
+    font-family: "Comfortaa";
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+textarea{
+    width: 80%;
+    background-color: #640404;
+    border: none;
+    font-family: "Comfortaa";
+    color: white;
+}
+
+textarea::placeholder{
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+
+select{
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #640404cc;
+    color:white;
+    font-family: "Comfortaa";
+    margin-bottom: 10px;
+}
+
+#pratos{
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -169,48 +186,170 @@ input[type="submit"]:hover{
     color: white;
     font-family: 'Ephesis';
     font-size: 40px;
-    height: 100vh;
+    padding-bottom: 50px;
 }
 
-.pratos h1{
+.Pratos{
     margin-top: 20px;
 }
 
 .linha{
-    width: 50%;
+    width: 70%;
     height: 2px;
     background-color: #f08700;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#quemSomos{
+    margin-bottom: 15px;
+}
+
+.foods{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    max-width: 70%;
+    padding-bottom: 10px;
+}
+
+.alimento_div{
+    text-decoration: none;
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    border: 2px solid #f08700;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px black, 0 0 20px black;
+ }
+
+
+.alimento{
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform .10s ease;
+    transition: transform .3s ease;
+}
+ 
+.alimento_div:hover .alimento{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+ 
+.sobre{
+     max-width: 60%;
+     margin: auto;
+     font-family:"Comfortaa";
+     font-size: 20px;
+     text-align: center;
+     margin-top: 25px;
 }
 
 
+#contato{
+    background-color: #f08700;
+    width: 100%;
+    font-family: "Comfortaa";
+    height: 300px;
+    overflow: hidden;
+    box-shadow: inset 0 0 1em black, 0 0 1em black;
+}
 
-@media only screen and (max-width: 810px) /* de 0px a 800px*/
+.rodapé{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    position: relative;
+}
+
+
+.location, .Social_media, .obs{
+    width: 300px;
+    height: 120px;
+    position: absolute;
+    text-align: center;
+}
+
+.location{
+    display: inline-block;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Social_media{
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    
+}
+
+.obs{
+    display: inline-block;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Social_media li{
+    width: 60px;
+    height: 50px;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.Social_media img{
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform .10s ease;
+    transition: transform .2s ease;
+}
+
+.Social_media img:hover{
+    -webkit-transform: scale(2.0);
+    transform: scale(1.2);
+}
+
+.copyright{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #640404cc;
+    font-family: "Comfortaa";
+    font-size: 12px;
+    color: #f08700;
+    font-weight: bold;
+    box-shadow: inset 0 0 1em black, 0 0 1em black;
+}
+
+@media only screen and (max-width: 960px) /* de 0px a 800px*/
 {
     .cabeçalho{
         margin: auto;
         padding-bottom: 30px;
     }
     
-    .restaurant_logo{ /**/
+    .restaurant_logo_E_nome{ /**/
         position: relative; 
     }
     
-    .fundo_restaurant{
-        text-align: center;
-        padding: 0px;
-        padding-top: 50px;
-    }
-    table{ /**/
+    .menu{ /**/
         position: static;
         margin: auto;
     }
     
-    th{
+    .menu th{
         padding-left: 0px;
     }
     
-    .delivery{
+    .delivery_form{
         float: none;
         margin: auto;
     }
@@ -218,6 +357,45 @@ input[type="submit"]:hover{
     /* class "fundo_restaurant"*/
     .fundo_restaurant{
         position: static;
+    }    
+
+    .alimento_div{
+        max-width: 200px;
+        height: 150px;
+    }
+
+    .menu_cabeçalho a{
+        font-size: 15px;
+    }
+
+    .sobre{
+        font-size: 15px;
+    }
+
+    #quemSomos{
+        font-size: 60px;
+    }
+
+    #contato{
+        height: 0%;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        
+    }
+    .rodapé{
+        position: static;
+        width: 100%;
+    }
+
+    .location, .Social_media, .obs{
+        position: static;
+        display: block;
+        transform: none;
+        margin: auto;
+    }
+    
+    .copyright{
+        font-size: 10px;
     }
     
 }
