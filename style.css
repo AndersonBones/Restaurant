@@ -155,6 +155,7 @@ textarea{
     border: none;
     font-family: "Comfortaa";
     color: white;
+    border-radius: 5px;
 }
 
 textarea::placeholder{
