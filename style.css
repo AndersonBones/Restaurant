@@ -12,13 +12,17 @@ body{
     background-color: #181818;
 }
 
- .cabeçalho{
+
+/* Configurações do cabeçalho */
+.cabeçalho{
     background-color: #8B0000;
     position: relative;
     overflow: hidden;
     box-shadow: inset 0 0 0px black, 0 0 2em black;
 }
 
+
+ /* Configurações da logo do restaurant */
 .nome{
     position: absolute;
     bottom: 50%;
@@ -29,17 +33,17 @@ body{
     font-size: 60px;
 }
 
+
+/* Menu de navegação */
 .menu{
     position: absolute;
     bottom: 50%;
     transform: translateY(50%);
     right: 100px;
 }
-
 .menu_cabeçalho th{
     padding-left: 20px;
 }
-
 .menu_cabeçalho a{
     color: white;
     font-size: 20px;
@@ -48,7 +52,6 @@ body{
     font-family: 'Comfortaa', cursive;
 
 }
-
 .menu_cabeçalho a:hover{
     background-color: #f08700;
     border-radius: 20px;
@@ -57,7 +60,8 @@ body{
 }
 
 
- /* class "fundo_restaurant"*/
+
+ /* Fundo restaurant */
  .fundo_restaurant{
     width: 100%;
     display: inline-block;
@@ -68,6 +72,8 @@ body{
     padding: 50px;
 }
 
+
+/* formulário delivery */
 .delivery_form{
     padding: 20px;
     border-radius: 20px;
@@ -78,10 +84,10 @@ body{
     max-width: 300px;
     box-shadow: inset 0 0 5px gold, 0 0 1em #E42C2B;
 }
-
 form{
     margin: auto;
 }
+/* descrição do formulário delivery*/
 .delivery_description {
     font-family:"Comfortaa";
 }
@@ -96,8 +102,8 @@ form h3{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-input[type="submit"]{
+/* botão "Concluir Pedido" */
+input[type="submit"]{ 
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 15px;
@@ -109,13 +115,10 @@ input[type="submit"]{
     cursor: pointer;
     font-size: 18px;
 }
-
 input[type="submit"]:hover{
     box-shadow: inset 0 0 5px gold, 0 0 1em gold;
     cursor: pointer;
 }
-
-/* class "delivery" */
 input{
     display: inline-block;
     width: 80%;
@@ -128,7 +131,6 @@ input{
     color: white;
     font-family: "Comfortaa";
 }
-
 input, select{
     font-size: 12px;
 }
@@ -148,7 +150,7 @@ input[type=number] {
    appearance: textfield;
 
 }
-
+/* complemento */
 textarea{
     width: 80%;
     background-color: #640404;
@@ -157,15 +159,13 @@ textarea{
     color: white;
     border-radius: 5px;
 }
-
 textarea::placeholder{
     color: white;
     padding-left: 5px;
     padding-top: 5px;
     font-size: 12px;
 }
-
-
+/* lanches disponíveis */
 select{
     width: 80%;
     padding-top: 10px;
@@ -178,6 +178,8 @@ select{
     margin-bottom: 10px;
 }
 
+
+/* Seção "Pratos" */
 #pratos{
     display: inline-block;
     width: 100%;
@@ -189,23 +191,11 @@ select{
     font-size: 40px;
     padding-bottom: 50px;
 }
-
-.Pratos{
+.Pratos_título{
     margin-top: 20px;
 }
 
-.linha{
-    width: 70%;
-    height: 2px;
-    background-color: #f08700;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#quemSomos{
-    margin-bottom: 15px;
-}
-
+/* Configurações das Fotos dos pratos */
 .foods{
     margin-left: auto;
     margin-right: auto;
@@ -213,7 +203,6 @@ select{
     max-width: 70%;
     padding-bottom: 10px;
 }
-
 .alimento_div{
     text-decoration: none;
     display: inline-block;
@@ -224,21 +213,32 @@ select{
     border-radius: 20px;
     box-shadow: inset 0 0 5px black, 0 0 20px black;
  }
-
-
 .alimento{
     width: 100%;
     height: 100%;
     -webkit-transition: -webkit-transform .10s ease;
     transition: transform .3s ease;
 }
- 
 .alimento_div:hover .alimento{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
- 
+
+/* linha amarela que separa as seções "Pratos" e "Quem somos nós" */
+.linha{
+    width: 70%;
+    height: 2px;
+    background-color: #f08700;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Seção quem somos nós */
+#quemSomos{
+    margin-bottom: 15px;
+}
+/* texto "Quem somos nós" */
 .sobre{
      max-width: 60%;
      margin: auto;
@@ -249,7 +249,8 @@ select{
 }
 
 
-#contato{
+/* Seção "rodapé" */ 
+#rodapé{
     background-color: #f08700;
     width: 100%;
     font-family: "Comfortaa";
@@ -257,15 +258,13 @@ select{
     overflow: hidden;
     box-shadow: inset 0 0 5px black, 0 0 1em black;
 }
-
-.rodapé{
+.contato{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
     position: relative;
 }
-
 
 .location, .Social_media, .obs{
     width: 300px;
@@ -286,7 +285,6 @@ select{
     left: 50%;
     transform: translate(-50%, -50%);
     top: 50%;
-    
 }
 
 .obs{
@@ -330,14 +328,15 @@ select{
     box-shadow: inset 0 0 1em black, 0 0 1em black;
 }
 
-@media only screen and (max-width: 960px) /* de 0px a 800px*/
+
+@media only screen and (max-width: 960px) /* responsividade para janelas de 0px a 960px*/
 {
     .cabeçalho{
         margin: auto;
         padding-bottom: 30px;
     }
     
-    .restaurant_logo_E_nome{ /**/
+    .restaurant{ /**/
         position: relative; 
     }
     
@@ -355,7 +354,6 @@ select{
         margin: auto;
     }
     
-    /* class "fundo_restaurant"*/
     .fundo_restaurant{
         position: static;
     }    
@@ -373,14 +371,15 @@ select{
         font-size: 60px;
     }
 
-    #contato{
+    #rodapé{
         height: 0%;
         padding-bottom: 50px;
         padding-top: 50px;
         
     }
-    .rodapé{
+    .contato{
         position: static;
+
         width: 100%;
     }
 
