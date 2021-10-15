@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Restaurant</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
@@ -12,7 +11,7 @@
     </head>
     <body>
         <header class="cabeçalho">
-            <div class="restaurant_logo_E_nome">
+            <div class="restaurant">
                 <img class="logo" src="./images/logo.png" alt="logo" width="100px">
                 <h1 class="nome">Restaurant</h1>
             </div>
@@ -20,7 +19,7 @@
                         
             <table class="menu">
                 <tr class="menu_cabeçalho">
-                    <th class="Contato"><a href="#contato">Contato</a></th>
+                    <th class="Contato"><a href="#rodapé">Contato</a></th>
                     <th class="Pratos"><a href="#pratos">Pratos</a></th>
                     <th class="Quem_somos"><a href="#quemSomos">Quem Somos</a></th>
                 </tr>
@@ -36,11 +35,11 @@
                 </div>
                 
                 <form>
-                    <input type="text" name="Nome" placeholder="Nome">
-                    <input type="text" name="sobrenome" placeholder="Sobrenome">
-                    <input type="number" name="telefone" placeholder="Telefone">
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="text" name="endereço" placeholder="Endereço para Entrega">
+                    <input type="text" name="Nome" placeholder="Nome" required>
+                    <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+                    <input type="number" name="telefone" placeholder="Telefone" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="endereço" placeholder="Endereço para Entrega" required>
 
                     <textarea name="complemento" cols="30" rows="4" placeholder="Complemento"></textarea>
 
@@ -58,7 +57,7 @@
                         <option value="esfirra_carne">Esfirra de Carne</option>
                     </select>
 
-                    <input type="number" name="quantidade_lanches" placeholder="Quantidade">
+                    <input type="number" name="quantidade_lanches" placeholder="Quantidade" min="1" max="3" required>
 
                     <h3>Bebidas Disponíveis</h3>
                     <select class="bebidas" name="bebidas">
@@ -72,7 +71,7 @@
                         <option value="coquete_limão">Coquetel de limão</option>
                     </select>
 
-                    <input type="number" name="quantidade_bebidas" placeholder="Quantidade">
+                    <input type="number" name="quantidade_bebidas" placeholder="Quantidade" min="1" max="3" required>
 
                     <input type="submit" value="Concluir Pedido">
                 </form>
@@ -80,7 +79,7 @@
         </div>
         
         <div id="pratos">
-            <h1 class="Pratos">Pratos</h1>
+            <h1 class="Pratos_título">Pratos</h1>
             <div class="linha"></div>
             
             <ul class="foods">
@@ -119,6 +118,18 @@
                 <li class="alimento_div">
                     <img class="alimento" src="./images/foods/sanduíche_assado_com_ovo_frito.jpg" alt="sanduíche_assado_com_ovo_frito">
                 </li>
+
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/foods/pexels-kasumi-loffler.jpg" alt="bife_batatas fritas">
+                </li>
+
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/foods/bife-cogumelo-macarrão.jpg" alt="bife-cogumelo-macarrão">
+                </li>
+
+                <li class="alimento_div">
+                    <img class="alimento" src="./images/foods/louis-hansel.jpg" alt="carne_com_molhoEvegetais">
+                </li>
             </ul>
             
             <h1 id="quemSomos">Quem Somos</h1>
@@ -136,8 +147,8 @@
             </div>
         </div>
     
-        <footer id="contato">
-            <div class="rodapé">
+        <footer id="rodapé">
+            <div class="contato">
                 <div class="location">
                     
                     <h2>Localização</h2>
@@ -160,7 +171,8 @@
                         </li>
                     </ul>
                 </div>
-    
+                <br>
+
                 <div class="obs">
                     <h2>Observações</h2>
                     <br>
