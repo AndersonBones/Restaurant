@@ -216,6 +216,7 @@ select{
 .alimento{
     width: 100%;
     height: 100%;
+    object-fit: cover;
     -webkit-transition: -webkit-transform .10s ease;
     transition: transform .3s ease;
 }
