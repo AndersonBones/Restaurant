@@ -1,2 +1,2 @@
 # Página de Restaurante Fictício 
-Desenvolvido apenas para fins de aprendizagem.
+Página Desenvolvida apenas para fins de aprendizagem.
