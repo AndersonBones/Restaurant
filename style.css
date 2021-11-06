@@ -1,0 +1,402 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #640404;
+}
+
+
+/* CABEÇALHO */
+#cabeçalho{
+    background-color: #8B0000;
+    
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 0px black, 0 0 2em black;
+}
+
+ /* LOGO DO RESTAURANTE */
+#logo-nome{
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 100px;
+    color: white;
+    font-family: 'Ephesis';
+    font-size: 60px;
+}
+
+
+/* MENU DE NAVEGAÇÃO */
+#menu-container{
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 100px;
+}
+#menu-cabeçalho li{ /* itens do menu */ 
+    padding-left: 20px;
+    display: inline-block;
+}
+#menu-cabeçalho a{ /* Links das seções da página */
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+ /* Fundo restaurante */
+ #fundo-restaurante-container{
+    width: 100%;
+    display: inline-block;
+    background-image: url(./images/restaurant.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 50px;
+    box-shadow: inset 0 0 1em black, 0 0 3em black;
+}
+
+
+/* formulário delivery */
+#delivery-form{
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    float: right;
+    background-color: #8B0000CC;
+    text-align: center;
+    max-width: 300px;
+    box-shadow: inset 0 0 5px gold, 0 0 1em #E42C2B;
+}
+form{
+    margin: auto;
+}
+/* descrição do formulário delivery*/
+#delivery-description {
+    font-family:"Comfortaa";
+}
+#delivery-description h2{ /* subtítulo do formulario delivery */
+    margin-bottom: 5px;
+}
+#delivery-description p{ /* pergunta ao usuário */
+    margin-bottom: 20px;
+}
+form h3{ /* "Bebidas disponíveis" */
+    font-family:"Comfortaa";   
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Dados do Cliente */ 
+input{
+    display: inline-block;
+    width: 80%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #640404cc;
+    color: white;
+    font-family: "Comfortaa";
+}
+
+/* definições para inputs number */
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+input::placeholder{ /* cor do texto da area dos inputs */
+    padding-left: 5px;
+    color: white;
+    font-family: "Comfortaa";
+}
+
+/* complemento */
+textarea{
+    width: 80%;
+    background-color: #640404;
+    border: none;
+    font-family: "Comfortaa";
+    color: white;
+    border-radius: 5px;
+}
+textarea::placeholder{ /* cor da area do campo complemento */
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+/* lanches disponíveis */
+select{
+    width: 80%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #640404cc;
+    color:white;
+    font-family: "Comfortaa";
+    margin-bottom: 10px;
+}
+input, select{ 
+    font-size: 12px;
+}
+
+/* botão "Concluir Pedido" */
+#Concluir-pedido-Button{ 
+    padding: 15px 10px;
+    background-color: #f08700;
+    color: white;
+    font-family:"Comfortaa";
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
+#Concluir-pedido-Button:hover{  /* efeito ao passar com o mouse no botão "Concluir Pedido" */
+    box-shadow: inset 0 0 5px gold, 0 0 1em gold;
+    cursor: pointer;
+}
+
+
+/* Seção "Pratos" */
+#pratos{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    
+    color: white;
+    font-family: 'Ephesis';
+    font-size: 40px;
+    padding-bottom: 50px;
+}
+#Pratos-título{
+    margin-top: 20px;
+}
+
+/* Fotos dos pratos */
+#foods{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    max-width: 70%;
+    padding-bottom: 10px;
+}
+.alimento-div{ /* container de cada prato */
+    text-decoration: none;
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    border: 2px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px black, 0 0 20px black;
+ }
+.alimento{ /* pratos */
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform .10s ease;
+    transition: transform .3s ease;
+    object-fit: cover;
+}
+.alimento-div:hover .alimento{ /* efeito ao passar com mouse nas fotos dos pratos */
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/* linha amarela que separa as seções "Pratos" e "Quem somos nós" */
+#linha{
+    width: 70%;
+    height: 2px;
+    background-color: #f08700;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Seção "Pratos" e "quem somos nós" */
+#quemSomos{
+    margin-bottom: 15px;
+}
+
+#Pratos-título, #quemSomos{
+    font-size: 2.5em;
+}
+
+/* texto "Quem somos nós" */
+#sobre{
+     max-width: 60%;
+     margin: auto;
+     font-family:"Comfortaa";
+     font-size: 20px;
+     text-align: center;
+     margin-top: 25px;
+}
+
+
+/* Seção "rodapé" */ 
+#rodapé{
+    background-color: #f08700;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    font-family: "Comfortaa";   
+    box-shadow: inset 0 0 1px black, 0 0 5em black;
+}
+#contato{ /* container de contato */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    position: relative;
+}
+
+#location, #Social-media, #obs{ /* localização, redes sociais e observações */
+    width: 300px;
+    height: 120px;
+    position: absolute;
+    text-align: center;
+}
+
+#location{ /* localização da empresa */
+    display: inline-block;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#Social-media{ /* redes sociais para contato */
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+#Media-social-links li{ /* links das redes sociais */
+    width: 60px;
+    height: 50px;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#Social-media img{ /* icones de cada rede social */
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform .10s ease;
+    transition: transform .2s ease;
+}
+
+#Social-media img:hover{ /* efeito ao passar o mouse nos icones das redes sociais */ 
+    -webkit-transform: scale(2.0);
+    transform: scale(1.2);
+}
+
+#obs{ /* observações do criador da página */
+    display: inline-block;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+#copyright{ 
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-family: "Comfortaa";
+    font-size: 12px;
+    color: #f08700;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 870px) /* responsividade para janelas menores que 960px */
+{
+    #cabeçalho{ 
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    
+    #restaurant-container{ 
+        position: relative; 
+    }
+    
+    #menu-container{ 
+        position: static;
+        text-align: center;
+    }
+
+    #menu-cabeçalho li{
+        padding-left: 0px;
+    }
+    
+    #delivery-form{
+        float: none;
+        margin: auto;
+    }
+    
+    #fundo-restaurant{
+        position: static;
+    }    
+
+    .alimento-div{
+        max-width: 200px;
+        height: 150px;
+    }
+
+    #sobre{
+        font-size: 15px;
+    }
+
+    #quemSomos{
+        font-size: 60px;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 1050px)
+{
+    #rodapé{
+        height: 0%;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        width: 100%;
+        border-radius: 0px;
+        
+    }
+    #contato{
+        position: static;
+        width: 100%;
+    }
+    
+    #location, #Social-media, #obs{
+        position: static;
+        display: block;
+        transform: none;
+        margin: auto;
+    }
+    
+    #copyright{
+        font-size: 10px;
+    }
+}
+
