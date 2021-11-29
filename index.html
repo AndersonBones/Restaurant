@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurante</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- FONTES -->
+        <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+        <link rel="sortcut icon" href="./images/logo.png" type="image/png-image">
+
+    </head>
+
+    <script>
+        /* configuração Hover para os itens no Menu */
+
+        function loadElements(){
+            /* logo-nome */
+            var logo_nome = document.getElementById("logo-nome");
+            logo_nome.addEventListener("mouseover", Cursor);
+
+            /* cabeçalho-item */
+            var cabeçalho_itens = document.getElementsByClassName("cabeçalho-item");
+            for(var itens of cabeçalho_itens){
+                itens.addEventListener("mouseover", onMouseOver);
+                itens.addEventListener("mouseout", onMouseOut)
+            }
+        }
+
+
+        function Cursor(){
+            this.style.cursor = "default";
+        }
+
+        function onMouseOver(){
+            this.style.backgroundColor = "#f08700";
+            this.style.borderRadius = "8px";
+            this.style.boxShadow = "inset 0 0 5px gold, 0 0 1em gold";
+        }
+        
+        function onMouseOut(){
+            this.style.backgroundColor = "#8B0000";
+            this.style.boxShadow = "none";
+        }
+    </script>
+
+    <body onload="loadElements()">
+
+        <div class="loader">
+            <img src="load-gif.gif" alt="">
+        </div>
+
+        <!-- CABEÇALHO -->
+        <header id="cabeçalho">
+            <div id="restaurant-container">
+                <img id="logo-icone" src="./images/logo.png" alt="logo" width="80px">
+                <h1 id="logo-nome">Restaurant</h1>
+            </div>
+                        
+            <nav id="menu-container">
+                <ul id="menu-cabeçalho">
+                    <li><a class="cabeçalho-item" href="#rodapé">Contato</a></li>
+                    <li><a class="cabeçalho-item" href="#pratos">Pratos</a></li>
+                    <li><a class="cabeçalho-item" href="#quemSomos">Quem Somos</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- FUNDO RESTAURANTE -->
+        <section id="fundo-restaurante-container">
+            <div id="delivery-form">
+                <div id="delivery-description">
+                    <h2>Delivery</h2>
+                    <p>Quer fazer um Pedido ?</p>
+                </div>
+                
+                <form>
+                    <input type="text" name="Nome" placeholder="Nome" required>
+                    <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+                    <input type="number" name="telefone" placeholder="Telefone" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="endereço" placeholder="Endereço para Entrega" required>
+
+                    <textarea name="complemento" cols="30" rows="4" placeholder="Complemento"></textarea>
+
+                    <h3>Lanches Disponíveis</h3>
+                    <select id="lanches" name="lanches">
+                        <option value="hamburguer">Hamburguer</option>
+                        <option value="hot_dog">Cachorro Quente</option>
+                        <option value="pizza_muçarela">Pizza Muçarela</option>
+                        <option value="pizza_Napolitana">Pizza Napolitana</option>
+                        <option value="pizza_calabresa">Pizza Calabresa</option>
+                        <option value="sanduíche_natural">Sanduíche Natural</option>
+                        <option value="coxinha_frango">Coxinha de Frango</option>
+                        <option value="smoothie">Smoothie</option>
+                        <option value="açaí">Açaí com Calda de Chocolate</option>
+                        <option value="esfirra_carne">Esfirra de Carne</option>
+                    </select>
+
+                    <input type="number" name="quantidade_lanches" placeholder="Quantidade" min="1" max="3" required>
+
+                    <h3>Bebidas Disponíveis</h3>
+                    <select id="bebidas" name="bebidas">
+                        <option value="Coca-cola">Coca-Cola em Lata</option>
+                        <option value="guaraná">Guaraná em Lata</option>
+                        <option value="suco_natural">Suco de Frutas Natural</option>
+                        <option value="agua_gaz">Agua com Gás</option>
+                        <option value="redbull">Energético Redbull</option>
+                        <option value="monster">Energético Monster</option>
+                        <option value="batida">Batida de Abacaxi com Morango</option>
+                        <option value="coquete_limão">Coquetel de limão</option>
+                    </select>
+
+                    <input type="number" name="quantidade_bebidas" placeholder="Quantidade" min="1" max="3" required>
+
+                    <input id="Concluir-pedido-Button" type="submit" value="Concluir Pedido">
+                </form>
+            </div>
+        </section>
+        
+        <!-- PRATOS -->
+        <section id="pratos">
+            <h1 id="Pratos-título"><strong>Pratos</strong></h1>
+            <div id="linha"></div>
+            
+            <ul id="foods">
+                <li class="alimento-div">
+                    <img class="alimento" src="https://images.unsplash.com/photo-1609167921178-e295a98f808f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="burguer">
+                </li>
+
+                <li class="alimento-div">
+                    <img class="alimento" src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="batata_frita">
+                </li>
+
+                <li class="alimento-div">
+                    <img class="alimento" src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="pizza">
+                </li>
+
+                <li class="alimento-div">
+                    <img class="alimento" src="https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=692&q=80" alt="macarrão">
+                </li>
+                
+                <li class="alimento-div">
+                    <img class="alimento" src="https://images.unsplash.com/photo-1600699899970-b1c9fadd8f9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="peixe_grelhado">
+                </li>
+
+                <li class="alimento-div">
+                    <img class="alimento" src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=745&q=80" alt="camarão">
+                </li>
+
+                <li class="alimento-div">
+                    <img class="alimento" src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="panqueta">
+                </li>
+
+                <li class="alimento-div">
+                    <img class="alimento" src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80" alt="bife_grelhado">
+                </li>
+
+                <li class="alimento-div">
+                    <img class="alimento" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="sanduíche_assado_com_ovo_frito">
+                </li>
+
+                <li class="alimento-div">
+                    <img class="alimento" src="https://images.unsplash.com/photo-1504973960431-1c467e159aa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="bife_batatas fritas">
+                </li>
+
+                <li class="alimento-div">
+                    <img class="alimento" src="https://c.pxhere.com/photos/c0/19/beef_delicious_dinner_dish_epicure_fajitas_food_gourmet-1497329.jpg!d" alt="bife-cogumelo-macarrão">
+                </li>
+
+                <li class="alimento-div">
+                    <img class="alimento" src="https://image.minnkane.com/post_image/image/3079/large_louis-hansel-1197394-unsplash.jpg" alt="carne_com_molhoEvegetais">
+                </li>
+            </ul>
+            
+            <!-- QUEM SOMOS -->
+            <h1 id="quemSomos"><strong>Quem Somos</strong></h1>
+            <div id="linha"></div>
+            <section id="sobre">
+                <p>Há 23 anos servimos o almoço que é o mais próximo do que você poderia comer em sua casa. 
+                    Pratos elaborados com produtos de primeira qualidade, preparados com carinho pela nossa Equipe. 
+                    Aqui você se sente em casa e encontra o que quer em matéria de refeição saborosa</p>
+                <br>
+                <p>O Restaurante leva até você o melhor almoço A La Carte da região acompanhado de um ótimo atendimento e por um preço mais que interessante, ou seja, 
+                    aqui você une o bom atendimento, qualidade e ótimo custo benefício e sai sempre satisfeito.</p>
+                <br>
+                <p>Temos um cardápio variado com pratos da cozinha Euro-Brasileira, com Buffet de Saladas e Sobremesas (inclusos no preço do prato) e do qual você pode servir-se à vontade.
+                    Com certeza aqui você encontrará a comida que procura.</p>
+            </section>
+        </section>
+        
+        <!-- CONTATO -->
+        <footer id="rodapé">
+            <div id="contato">
+                <div id="location">
+                    
+                    <h2>Localização</h2>
+                    <br>
+                    <p>R. Concórdia, 153 - Centro, Lucas do Rio Verde - MT, 78455-000</p>
+                </div>
+    
+                <div id="Social-media">
+                    <h2>Contato</h2>
+                    <br>
+                    <nav>
+                        <ul id="Media-social-links">
+                            <li>
+                                <a href="https://www.instagram.com/"><img src="./images/instagram.png" alt="instagram_image"></a>
+                            </li>
+                            <li>
+                                <a href="https://web.whatsapp.com/"><img src="./images/whatsapp.png" alt="whatsapp_image"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/"><img src="./images/facebook.png" alt="facebook_image"></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <br>
+
+                <div id="obs">
+                    <h2>Observações</h2>
+                    <br>
+                    <p>Esta é uma Página de amostra criada apenas para fins de apredizagem usando CSS, HTML e JavaScript.</p>
+                </div>
+            </div>
+        </footer>
+
+        <section id="copyright">
+            <p>©2021 - Todos os direitos reservados a <em> Anderson Bones </em>. Todas as imagens foram usadas exclusivamente para fins estudantis.</p>
+        </section>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
