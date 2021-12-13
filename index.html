@@ -16,7 +16,7 @@
     <script>
         /* configuração Hover para os itens no Menu */
 
-        function loadElements(){
+        onload = function (){
             /* logo-nome */
             var logo_nome = document.getElementById("logo-nome");
             logo_nome.addEventListener("mouseover", Cursor);
@@ -46,12 +46,7 @@
         }
     </script>
 
-    <body onload="loadElements()">
-
-        <div class="loader">
-            <img src="load-gif.gif" alt="">
-        </div>
-
+    <body>
         <!-- CABEÇALHO -->
         <header id="cabeçalho">
             <div id="restaurant-container">
